@@ -1,7 +1,7 @@
 {
   "name": "local-stream",
   "version": "1.0.0",
-  "description": "",
+  "description": "Local Stream",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,8 @@
     "url": "git+https://github.com/sajadjafari/local-stream.git"
   },
   "keywords": [
-    "mediastream"
+    "media",
+    "stream"
   ],
   "author": "Sajad Jafari",
   "license": "MIT",
