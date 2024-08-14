@@ -1,9 +1,12 @@
 {
-  "name": "local-stream",
-  "version": "1.0.0",
+  "name": "media-stream-list",
+  "version": "1.0.92",
   "description": "Local Stream",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
+    "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +22,14 @@
   "bugs": {
     "url": "https://github.com/sajadjafari/local-stream/issues"
   },
-  "homepage": "https://github.com/sajadjafari/local-stream#readme"
+  "homepage": "https://github.com/sajadjafari/local-stream#readme",
+  "dependencies": {
+    "media-stream-list": "^1.0.7",
+    "nanoid": "^5.0.7"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  }
 }
