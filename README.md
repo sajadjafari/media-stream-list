@@ -10,7 +10,7 @@ You can install the package via npm:
 npm install media-stream-list
 ```
 
-###Usage
+### Usage
 Importing the Package
 To use the utilities, import the package into your project:
 
@@ -18,7 +18,7 @@ To use the utilities, import the package into your project:
 import MediaStreamUtils from 'media-stream-list';
 ```
 
-###Available Media Sources
+### Available Media Sources
 The package supports the following media sources:
 
 *Image Files:* Load image files from the user's local system.
@@ -30,52 +30,52 @@ The package supports the following media sources:
 *Audio Input:* Capture audio from microphones.
 *Video Input:* Capture video from webcams.
 
-###Example Usage
+### Example Usage
 
-####List Available Media Sources
+**List Available Media Sources** 
 
 You can get a list of available media sources by calling getMediaList():
 
-```bash
+```typescript
 const mediaList = await MediaStreamList.getMediaList();
 console.log(mediaList);
 ```
 
 Each item in the list includes a getSource method that you can call to obtain the corresponding media source.
 
-####Capture Video from Webcam
-```bash
+**Capture Video from Webcam**
+```typescript
 const webcamSource = await MediaStreamList.getMediaTrack('video');
 console.log(webcamSource);
 ```
 
-####Capture Audio from Microphone
-```bash
+**Capture Audio from Microphone**
+```typescript
 const audioSource = await MediaStreamList.getMediaTrack('audio');
 console.log(audioSource);
 ```
 
-####Capture Screen
-```bash
+**Capture Screen**
+```typescript
 const screenCapture = await MediaStreamList.getDisplay();
 console.log(screenCapture);
 ```
 
-####Load Image File
-```bash
+**Load Image File**
+```typescript
 const imageSource = await MediaStreamList.loadFile('imagefile');
 console.log(imageSource);
 ```
 
-Utility Methods
-```
+**Utility Methods**
+```typescript
 devices(type: MediaDeviceKind | 'input' | 'output'): Promise<MediaDeviceInfo[]>
 ```
 Get a list of media devices (e.g., microphones, cameras).
 
 `type: Specify the type of device to list (e.g., 'audioinput', 'videoinput', 'input', 'output').`
 
-```
+```typescript
 getMediaTrack(kind: 'video' | 'audio', constraints?: MediaTrackConstraints): Promise<MediaStream>
 ```
 Get a media stream for a specified type of media track.
@@ -84,20 +84,21 @@ Get a media stream for a specified type of media track.
 
 `constraints: (Optional) Media track constraints.`
 
-```
+```typescript
 getDisplay(constraints?: DisplayMediaStreamOptions): Promise<MediaStream>
 ```
 Capture the user's screen or a specific window.
 
 `constraints: (Optional) Display media stream options.`
-```
+
+```typescript
 loadFile(type: FileSourceKind): Promise<SourceItem>
 ```
 Load a file (image, video, or audio) from the user's system.
 
 `type: Specify 'imagefile', 'videofile', or 'audiofile'.`
 
-```
+```typescript
 getMediaList(): Promise<Array<MediaItem>>
 ```
 Get a list of available media items, including files and capture devices.
